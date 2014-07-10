@@ -17,50 +17,13 @@
 </body>
 
 <template name="header">
-	<h1>{{name}}'s Einkaufsliste</h1>
+  <h1>
+    Meine Einkaufsliste
+  </h1>
 </template>
 
 <template name="einkaufsliste">
-  <table class="pure-table pure-table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Produkt</th>
-        <th>Menge</th>
-        <th>Check</th>
-        <th>Entfernen</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each produkte}}
-        {{> produkt}}
-      {{/each}}
-    </tbody>
-  </table>
-</template>
-
-<template name="produkt">
-  <tr>
-    <td>{{index}}</td>
-    <td>{{name}}</td>
-    <td>{{menge}}</td>
-    <td>{{#if checked}}
-    	<button class="button-success button">V</button>
-       	{{else}}
-        	<button class="button-error button">X</button>
-      	{{/if}}
-      </td>
-    <td> <button class="button-remove button">Danger!</button> </td>
-  </tr>
 </template>
 
 <template name="addItem">
-  <form class="pure-form">
-    <fieldset>
-      <legend><h2>Was Fehlt noch?</h2></legend>
-        <input id="itemName" type="text" placeholder="Produkt">
-        <input id="itemMenge" type="text" placeholder="Menge">
-      </fieldset>
-    <button id="addButton" type="submit" class="button-success button-add button">Hinzufügen</button>
-  </form>
 </template>
