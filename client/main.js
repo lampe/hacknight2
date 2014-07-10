@@ -6,8 +6,8 @@ Template.header.name = function(){
 
 Template.einkaufsliste.produkte = function(){
   produkte = Produkte.find({}).fetch();
-  for(var i = 0; i < produkte.length; i++) {
-    produkte[i].index = i+1;
+  for(var i = 1; i < produkte.length; i++) {
+    produkte[i].index = i;
   }
   return produkte;
 }
