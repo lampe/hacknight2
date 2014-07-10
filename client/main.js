@@ -17,7 +17,8 @@ Template.addItem.events({
     event.preventDefault();
     var name = document.getElementById("itemName");
     var menge = document.getElementById("itemMenge");
-    if (name.value.length > 3 && menge.value.length >0) {
+    console.log(name.value)
+    if (name.value.length > 0 && menge.value.length > 0) {
       Produkte.insert({"name":name.value, "menge":menge.value,"checked":false});
       name.value = "";
       menge.value = "";
